@@ -1,3 +1,7 @@
+%global _daemon_version 5.3.1.34
+%global _version 1.7.2
+%global _release 2
+
 %global debug_package %{nil}
 %if 0%{?rhel} && 0%{?rhel} <= 7
 %global kernel_pkg_name kernel-ml
@@ -10,7 +14,6 @@ Version:	%{_version}
 Release:	%{_release}
 Summary:	DisplayLink VGA/HDMI driver for DL-6xxx, DL-5xxx, DL-41xx and DL-3xxx adapters
 
-Group:		User Interface/X Hardware Support
 License:	GPL v2.0, LGPL v2.1 and Proprietary
 Source0:	https://github.com/DisplayLink/evdi/archive/v%{version}.tar.gz
 Source1:	displaylink.service
@@ -21,7 +24,6 @@ Source4:	DisplayLink USB Graphics Software for Ubuntu %{_daemon_version}.zip
 Source5:	20-displaylink.conf
 Source6:	95-displaylink.preset
 Source7:	%{name}.logrotate
-ExclusiveArch:	i386 x86_64
 
 BuildRequires:	gcc-c++
 BuildRequires:	libdrm-devel
